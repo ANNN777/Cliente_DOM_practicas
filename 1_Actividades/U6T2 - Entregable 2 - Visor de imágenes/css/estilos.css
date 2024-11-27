@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;/* //me va a salir ordenados por filas. */
+    margin:auto;
+    align-content: center;
+    width: 1000px
+  }
+
+  h1{
+    text-align: center
+    
+  }
+  
+  .container1 img {/* //Para que todas las imágenes se pongan a tamaño 100 */
+    width: 100px;
+  }
+  .container1 {
+   display: flex;
+   flex-direction: column;
+   width: 150px;
+  }
+  
+  /*Contenedor central, el qué se encuentra con el elemento que está dentro*/
+  .container2 {
+    display: flex;
+    flex-direction: column;
+     box-sizing: border;
+     border: 7px black solid;
+     width: 600px;
+     justify-content: center;/*aliner imagen sobre la vertical*/
+     align-items: center;/*para alinear la imagen sobre la horizontal*/
+     
+   }
+
+   .container3 {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+   }
+
+   /* //Las imágenes de las lupas que están a la dcha del cuadro. */ 
+   .container3 img {
+    margin-left: 10px;
+    width: 90px;
+   }
+   
+   /* <!-- 4º columna.  --> */
+   .container4{ /* //Que es el de los colores contenidos. */ 
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 240px;
+
+   }
+
+   .rec1_negro {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    margin-right: 10px;
+   }
+
+   .rec2_rojo {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    margin-right: 10px;
+   }
+
+   .rec3_azul {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(36, 1, 235);
+    margin-right: 10px;
+   }
+
+   .rec4_amarillo {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 209, 4);
+    margin-right: 10px;
+   }
+
+   .rec5_verde {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(92, 158, 48);
+    margin-right: 10px;
+   }
+
+   .rec6_rosa {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(230, 182, 206);
+    margin-right: 10px;
+   }
+   
+   
+   

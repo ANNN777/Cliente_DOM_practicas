@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Dinámica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Lista Dinámica</h1>
+    <ul id="lista">
+        <li>Elemento de muestra</li>
+    </ul>
+
+    <label for="numItems">Número de elementos a añadir:</label>
+  <!--   //Nodo a cambiar -->
+    <input type="number" id="numItems" min="1" placeholder="Introduce un número">
+    
+    <button id="generarInputs">Generar cuadros de texto</button>
+
+    <div class="inputs-container" id="inputsContainer"></div>
+
+    <button id="añadirItems">Añadir elementos a la lista</button>
+    <button id="borrarPrimero">Borrar primer li</button>
+    <button id="borrarUltimo">Borrar último li</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
