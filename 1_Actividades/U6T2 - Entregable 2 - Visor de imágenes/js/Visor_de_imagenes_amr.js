@@ -1,9 +1,11 @@
-let nodo_botones=document.querySelectorAll(".container4 div");//Estoy accedientdo al interior de los divs, como si fuera una propuedad de .css
+//definir los nodos. 
+let nodo_botones=document.querySelectorAll(".container4 div");//Estoy accedientdo al interior de los divs, como si fuera una propiedad de .css
+//container4 div. Son cada uno de los botones de mi .html
 
-
-let nodo_recuadro=document.getElementById("contenedor2");
-//siempre necesio obetener el nodo de la elemento que quierotocar. No puedo
+let nodo_recuadro=document.getElementById("contenedor2");/*Recuadro central*/
+//siempre necesio obetener el nodo de la elemento que quiero tocar. No puedo
 //puedo pretender tocar en javascript algo sin querer tocar el nodo.
+
 let nodo_imagen= document.getElementById("imagenCentral");
 
 let container1_img= document.querySelectorAll(".container1 img");
@@ -14,8 +16,8 @@ let lupa= document.getElementById("contenedor2");
 
 
 
-
-//BOTONES DE COLORES
+//LLAMADAS A EVENTOS. Ya llamo directamente a las variables. 
+//BOTONES DE COLORES. 
 for (const element of nodo_botones){//Recorro el array de botones. 
     element.addEventListener("mouseover",cambiar_color);//El evento es cambiar el color
 }
@@ -23,10 +25,14 @@ for (const element of nodo_botones){//Recorro el array de botones.
 //función para cambiar el color del borde. 
 function cambiar_color(e){/*nodo que gestiona o produce el evento*/
    
-    let color=getComputedStyle(e.target).backgroundColor;//El e.target es nuestra vida. Con el e.target vas a conocer la ruta de la imagen que me ha generado el evento. 
+    let color=getComputedStyle(e.target).backgroundColor;//El e.target es nuestra vida. 
+    //Con el e.target vas a conocer la ruta de la imagen que me ha generado el evento. 
     //getComputedStyle lo que hago es una propiedad para acceder al .CSS y al backgroundColor. 
     //El e. le pasa el nodo de quien ha generado el evento. 
     //Ello ha evitado que yo haga una función para cada color de cada uno de los .div. 
+
+    //En términos más simples, e.target apunta 
+    //al elemento específico sobre el que se ha producido la acción.
 
     //getConputedStyle accede al .css y lee su background
 
@@ -42,6 +48,7 @@ function cambiar_color(e){/*nodo que gestiona o produce el evento*/
     nodo_recuadro.style.borderColor=color;
     //nodo_botones.style.borderColor;// Cambia el color del borde a azul
     //con una sola línea puedo cambiar el color del nodo de cada botón, según va cambiando el id.
+    //el color se le pasa como propiedad al borde principal del contenedor. 
 }
 //
 
@@ -82,11 +89,11 @@ function zoomOut(){
     let ancho=parseInt(nodo_imagen.getAttribute("width"));//Obtenemos el atributo width del nodo imagen. 
     console.log(ancho);//Para ver si está leyendo el ancho dentro de la función.
     
-    let minimo = 10;//El minimo va a ser 10px
+    let minimo = 40;//El minimo va a ser 10px
 
-    if(ancho>minimo){//El ancho no puede ser superior al maximo
+    if(ancho>minimo){//El ancho tiene que ser superior al minimo
 
-        ancho = ancho - 30;//ir cambiando el ancho de 30 en 30. 
+        ancho = ancho - 30;//ir cambiando el ancho de menos 30 en menos 30. 
         nodo_imagen.setAttribute("width", ancho);//de esa forma iríamos actulizando el ancho del nodo con el 
         //nuevo valor correspondiente. 
     }
@@ -109,6 +116,7 @@ for (const element of container1_img) {
 function cambia_imagen(e){//lo enrutas. Hay que generar el nodo del que genera el evento tal y como del que lo recibe. 
     let ruta = e.target.getAttribute("src"); //coge al atributo src del contenedor 2 que accede a las imágen central
 
+    //e.target apunta al botón que se ha presionado.
     nodo_imagen.setAttribute("src",ruta);
 } 
 
