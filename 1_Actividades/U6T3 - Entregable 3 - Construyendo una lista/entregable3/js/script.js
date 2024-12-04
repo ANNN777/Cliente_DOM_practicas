@@ -1,4 +1,4 @@
-//Calcular los nodos del html que me va a hacer falta. 
+do//Calcular los nodos del html que me va a hacer falta. 
 
 let nodo_input=document.getElementById("numItems");//Este es el padre.
 
