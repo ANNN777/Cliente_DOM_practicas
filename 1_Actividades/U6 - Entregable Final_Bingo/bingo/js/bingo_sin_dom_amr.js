@@ -9,7 +9,8 @@ const boton_generar= document.getElementById("generarNumero");//Nodo_boton
 let cartonPlano = [];
 let nodo_bola = document.getElementById("bolaContainer");
 let nodos_carton= document.querySelectorAll("#cartonBingo div");//tengo que llamar a cartonBingo
-let array_bolas_tablero = document.getElementById(".tablero div");
+
+let array_bolas_tablero = document.querySelectorAll(".tablero div");
 //Yo ya tengo todos los cartones en formato plano. 
 //y luego llevarlo al div correspondiente del .html
 
@@ -54,7 +55,7 @@ boton_generar.addEventListener("click", generarNumeroAleatorio);//El evetno para
 // Mostrar el número generado en la zona de "bola generada"
 function mostrarNumero(numero) {
 
-    nodo_bola.textContent= numero;//añadir número una que se va pulsando el último número cantado.
+    nodo_bola.textContent= numero ;//añadir número una VEZ  que se va pulsando el último número cantado.
 
 }
 
@@ -114,5 +115,5 @@ function marcarNumeroEnCarton(numero) {
 crearTablero();
 crearCarton();
 rellenarCarton();
-marcarNumeroEnTablero();
 
+//ANTONIO JOSÉ MÉRIDA. 2º DAW//
